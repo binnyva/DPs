@@ -13,17 +13,17 @@
   <div id="header">
     <div> 
       <ul>
-        <li><a href="index.php#idea" class="on">idea</a></li>
-        <li><a href="index.php#code">code</a></li>
-        <li><a href="index.php#author">author</a></li>
-        <li><a href="index.php#contact">contact</a></li>
+        <li><a href="index.php" class="on">Home</a></li>
+        <li><a href="http://github.com/binnyva/DPs">code</a></li>
+        <li><a href="http://binnyva.com/">author</a></li>
       </ul>
-      <h1><a href="index.php"><?php $config['site_title'] ?></a></h1>
+      <h1><a href="index.php"><?php echo $config['site_title'] ?></a></h1>
+      
+      <p><?php echo $config['site_tagline'] ?></p>
     </div>
   </div>
   <div id="content"> 
-    <div id="right"> 
-
+    <div id="right">
 <div id="error-message" <?=($QUERY['error']) ? '':'style="display:none;"';?>><?php
 	if(isset($PARAM['error'])) print strip_tags($PARAM['error']); //It comes from the URL
 	else print $QUERY['error']; //Its set in the code(validation error or something.
